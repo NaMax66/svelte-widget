@@ -77,9 +77,7 @@
   }
 
   function handleOnChange() {
-    if (isIdentifierCorrect || !identifier) {
-      return
-    } else {
+    if (!isIdentifierCorrect && identifier) {
       isHintShown = true
       setTimeout(()=> {
         isHintShown = false
