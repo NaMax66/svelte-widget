@@ -67,7 +67,7 @@
 		const utm =["utm_source="+location.hostname,"utm_medium=cpa","utm_campaign=form"];
 		const params = this.action.split('?', 2);
 		const outputParams = (params[1]) ? params[1]+'&':'';
-    
+
     window.open("https://avtocod.ru/proverkaavto/"+ID+"?"+outputParams+utm.join("&"));
   }
 
