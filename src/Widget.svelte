@@ -192,17 +192,6 @@
     }
   }
 
-  .avtocod-form span + span
-  {
-    margin-left: 5px;
-  }
-
-  @media (max-width: 768px) {
-    .avtocod-form span + span {
-      margin-left: 0;
-    }
-  }
-
   .arrow-box {
     position: absolute;
     background: #fff;
@@ -240,10 +229,6 @@
   {
     display: inline-block;
     padding: 10px;
-  }
-  .arrow-box__text_hidden
-  {
-    display: none;
   }
 
   @media (max-width: 450px) {
