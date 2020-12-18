@@ -8,7 +8,12 @@
   <title>Document</title>
 </head>
 <body>
-<avtocod-widget></avtocod-widget>
+<avtocod-widget refid={$refid} chan={$channel_code}"></avtocod-widget>
+<script>
+  const widget = document.querySelector('avtocod-widget')
+  widget.setAttribute('refid', 'testRefId')
+  widget.setAttribute('chan', 'testChan')
+</script>
 <script defer src='build/avtocod_form_v2.js'></script>
 </body>
 </html>

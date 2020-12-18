@@ -1,6 +1,6 @@
-<svelte:options tag="avtocod-widget" immutable={true} />
+<svelte:options tag=avtocod-widget immutable={true} />
 
-<form on:submit|preventDefault="{handleSubmit}" target="_blank" class="avtocod-form" action="https://avtocod.ru/?a_aid=test1&chan=">
+<form on:submit|preventDefault="{handleSubmit}" target="_blank" class="avtocod-form" action="https://avtocod.ru/?a_aid={refid}&chan={chan}">
   <div class="avtocod-form__header">Проверить историю авто на сервисе Автокод</div>
   <div class="avtocod-form__body">
     <span>
@@ -44,6 +44,7 @@
 
 <script lang="ts">
   import type { Identifier } from 'main'
+
   const data: Identifier[] = [
     {
       type: 'VIN',
@@ -59,8 +60,10 @@
   let currentIdentifier = data[1]
   let identifier = ''
   let isHintShown = false
-
   $: isIdentifierCorrect = currentIdentifier.validator.test(identifier)
+
+  export let refid = ''
+  export let chan = ''
 
   function handleSubmit() {
     const ID = identifier.toUpperCase()
